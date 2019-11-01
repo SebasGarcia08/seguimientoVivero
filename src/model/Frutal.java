@@ -15,7 +15,6 @@ public class Frutal extends Planta implements Florecimiento{
     }
 
     public String proximoFlorecimiento(int mesSiembra, int anioSiembra, int mesActual, int anioActual) {
-        // String respuesta = "";
         // int meses_de_diferencia;
         int mes_florecimiento, anio_florecimiento;
         int meses_minimos_para_que_florezca_en_el_mismo_anio = 12 - meses_en_florecer;

@@ -26,18 +26,17 @@ public class Main{
         }
 
         out.println(vivero.listarOrnamentalesMayoresAUnmetro());
-        out.println(vivero.addFrutal("Fuck", 34.5, "rffdsx"));
         out.println(vivero.mostrar());
         for(Frutal frutal : vivero.getFrutales())
             out.print( (frutal != null) ? frutal.proximoFlorecimiento(10, 2019, 3, 2020) + "\n" : "");
+        out.println(vivero.listarNombresDeFrutos());
     }
 
     public static String generarString(int max_caracteres){
         char[] letras = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         String string_aleatorio = "";
         for(int j = 0; j <= max_caracteres; j++)
-            string_aleatorio += letras[random.nextInt((letras.length-1) + 1 - 0) + 0];
+            string_aleatorio += letras[random.nextInt(letras.length)];
         return string_aleatorio;
     }
 }
-
