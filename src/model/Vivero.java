@@ -46,6 +46,7 @@ public class Vivero {
     }
 
     public String addFrutal(String nombre, double costo, String nombre_fruto){
+        
         String respuesta = "Aniadido exitosamente";
         int[] posicion_disponible = posicionDisponibleEn(SECTOR_A);
         boolean is_idx_available = !Arrays.equals(posicion_disponible, not_found);
