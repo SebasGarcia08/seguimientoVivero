@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Vivero {
+    /**
+     * This class plays the role of the controller class in thie bussines logic of this task.
+     * @author Sebastián García Acosta
+     */
     private String nombre;
     private String direccion;
     private Planta[][] plantas;
@@ -45,6 +49,7 @@ public class Vivero {
         return idx_available;
     }
 
+// #################################################################### RF1 ####################################################################
     public String addFrutal(String nombre, double costo, String nombre_fruto){
         String respuesta = "Aniadido exitosamente";
         int[] posicion_disponible = posicionDisponibleEn(SECTOR_A);
@@ -73,7 +78,7 @@ public class Vivero {
             return respuesta;
     }
 
-
+// #################################################################### RF2 ####################################################################
     public String listarOrnamentalesMayoresAUnmetro(){
     String res = "LISTA DE PLANTAS ORNAMENTALES MAYORES A UN METRO:\n";
         for(int i=6; i < 12; i++)
@@ -83,6 +88,7 @@ public class Vivero {
         return res;
     }
 
+// #################################################################### RF3 ####################################################################
     public String listarPorDiferentesNombres(){
         String res = "";
         for(int i=0; i < plantas.length; i++)
@@ -92,6 +98,7 @@ public class Vivero {
         return res;
     }
 
+// #################################################################### RF4 ####################################################################
     public Planta buscarPlanta(String nombre){
         int i_idx = buscarPorNombre(nombre)[0];
         int j_idx = buscarPorNombre(nombre)[1];
@@ -99,6 +106,7 @@ public class Vivero {
         return planta_found;
     }
 
+// #################################################################### RF5 ####################################################################
     public String listarNombresDeFrutos(){
         String res = "NOMBRES DE FRUTOS:\n";
         ArrayList<String> nombres_de_frutas = new ArrayList<String>();
@@ -111,6 +119,7 @@ public class Vivero {
         return res;
     }
 
+// #################################################################### RF6 ####################################################################
     public String mostrar(){
         String res = "";
         for(int i = 0; i < plantas.length; i++)
