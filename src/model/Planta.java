@@ -30,4 +30,9 @@ public abstract class Planta{
         this.costo = costo;
     }
 
+    @Override
+    public String toString() {
+        return " costo = " + costo + ", nombre = " + nombre + "";
+    }
+
 }

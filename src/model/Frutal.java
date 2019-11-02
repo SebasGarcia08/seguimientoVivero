@@ -3,14 +3,20 @@ package model;
 public class Frutal extends Planta implements Florecimiento{
     String nombre_fruto;
     public static int meses_en_florecer = 8; // meses
-    public static String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julo","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    public static String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Juio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    public static int numberOfObjs = 0;
 
     public Frutal(String nombre, double costo, String nombre_fruto) {
         super(nombre, costo);
         this.nombre_fruto = nombre_fruto;
+        ++numberOfObjs;
+    }
+    public static int getNumberOfObjs(){
+        return numberOfObjs;
     }
 
     public Frutal() {
+        super("", 0);
         this.nombre_fruto = "";
     }
 
@@ -39,6 +45,6 @@ public class Frutal extends Planta implements Florecimiento{
 
     @Override
     public String toString() {
-        return "Frutal [nombre_fruto=" + nombre_fruto + "]";
+        return "[Frutal, "+ super.toString() + ", nombre_fruto = " + nombre_fruto + "]";
     }
 }

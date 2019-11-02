@@ -2,12 +2,16 @@ package model;
 
 public class Ornamental extends Planta{
     double altura;
-
-    
+    public static int numberOfObjs = 0;
 
     public Ornamental(String nombre, double costo, double altura) {
         super(nombre, costo);
         this.altura = altura;
+        ++numberOfObjs;
+    }
+
+    public static int getNumberOfObjs(){
+        return numberOfObjs;
     }
 
     public Ornamental() {
@@ -25,8 +29,7 @@ public class Ornamental extends Planta{
 
     @Override
     public String toString() {
-        return "{" +
-            " altura='" + getAltura() + "'" +
-            "}";
+        return "[Ornamental, altura = " + altura + super.toString() + "]";
     }
+
 }
